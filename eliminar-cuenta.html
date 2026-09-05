@@ -44,12 +44,18 @@
 
   <h2>Qué se elimina</h2>
   <ul>
-    <li>Tu cuenta y tu nombre de usuario.</li>
-    <li>El nombre y el correo que llegaron de tu inicio de sesión con Google o Apple.</li>
-    <li>El número de teléfono que verificaste.</li>
-    <li>Tus reseñas, rutas de comunidad, planes, reportes y las fotos que hayas adjuntado.</li>
-    <li>Tus check-ins, sellos y el progreso del Pasaporte.</li>
-    <li>Los identificadores que te asociaban en nuestras herramientas de analítica (PostHog) y de suscripciones (RevenueCat).</li>
+    <li>Tu cuenta y tu perfil. Tu nombre de usuario queda <strong>reservado</strong> para que nadie pueda usarlo para hacerse pasar por ti, pero deja de apuntar a ningún perfil.</li>
+    <li>El nombre que llegó de tu inicio de sesión (Apple o Google). No guardamos tu correo.</li>
+    <li>El número de teléfono que verificaste (el registro de verificación se borra al verificar; no lo conservamos).</li>
+    <li>Tus check-ins, sellos, rutas propias y el progreso del Pasaporte, que solo existían en tu teléfono.</li>
+    <li>Los identificadores que te asociaban en nuestras herramientas de analítica (PostHog) y de suscripciones (RevenueCat) se reinician.</li>
+  </ul>
+
+  <h2>Qué se desvincula de ti (pero no se borra)</h2>
+  <ul>
+    <li><strong>Tus reseñas, rutas de comunidad, planes y respuestas a planes</strong>: tu nombre se sustituye por «Hopero» y se eliminan los identificadores que los unían a ti. El texto se conserva porque otras personas y el propio bar dependen de él, pero nada en él apunta a ti.</li>
+    <li><strong>Tus conteos de check-ins</strong> en la Leyenda Local y la liga semanal quedan como cifras agregadas sin tu nombre.</li>
+    <li><strong>Las pizarras de bebidas</strong> que compartiste para un bar se conservan sin tu nombre.</li>
   </ul>
 
   <h2>Qué se conserva, y por qué</h2>
@@ -57,7 +63,8 @@
     <li><strong>Registros de compra y suscripción</strong>, por obligación fiscal y para prevenir fraude. Google Play y Apple conservan los suyos según sus propias políticas.</li>
     <li><strong>Registros de entrega de SMS</strong> en Twilio, nuestro proveedor de verificación, según su política de retención.</li>
     <li><strong>Informes de fallos</strong> anonimizados en Firebase Crashlytics, que se borran solos a los 90 días.</li>
-    <li><strong>Un resumen irreversible (hash) del teléfono verificado</strong> durante un tiempo limitado, únicamente para impedir que se repita un periodo de prueba gratuito con el mismo número.</li>
+    <li><strong>Los reportes que enviaste, incluidas las fotos adjuntas</strong>, como registro de moderación para hacer cumplir los términos. Nunca se muestran a otros usuarios.</li>
+    <li><strong>Los reclamos de dueño de negocio</strong> que enviaste, como registro de la verificación que hicimos.</li>
   </ul>
   <p>Ninguno de esos registros permite reconstruir tu cuenta ni volver a identificarte dentro de la app.</p>
 
