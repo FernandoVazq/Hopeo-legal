@@ -132,6 +132,7 @@
 
   <h4>2.1 Account Information</h4>
   <p>Hopeo uses <strong>Sign in with Apple</strong>. Apple gives us a unique identifier for your account and, only if you choose to share it, your name — which becomes your initial display name. <strong>We do not request or store your email address.</strong> The identifier is stored on your device and is attached to the content you publish (see 2.5), so your posts stay yours. We do not keep a separate user profile on our servers.</p>
+  <p><strong>On Android</strong>, the App creates an anonymous account identifier through Firebase Authentication when you first open it; it carries no name, email or phone number. If we later add Google or Apple sign-in on Android, we will ask you first and update this policy to say exactly what your provider shares with us.</p>
 
   <h4>2.2 Profile and Preferences</h4>
   <p>We store the profile you create in the App: your username, display name, optional bio, your access tier (Local, Visitor, or Guest), and the taste preferences you select during setup. Your username is public to other users wherever your activity appears — for example on Community Routes and reviews.</p>
@@ -140,6 +141,7 @@
   <p>Free local access requires confirming a Puerto Rico phone number. When you request a code, we send your phone number to <strong>Twilio</strong>, which generates and delivers the SMS and checks the code you enter. We keep a record linking an opaque challenge identifier to that number only while the code is pending, so the App never has to transmit the raw number a second time; that record is <strong>deleted as soon as you verify, and in any case within 24 hours</strong>. To limit how often codes can be requested we keep a salted one-way hash of the number for up to one hour; it cannot be reversed to recover your number. We use the number only to confirm a Puerto Rico area code. We do not use it for marketing and we do not send you SMS messages other than the verification code.</p>
 
   <h4>2.4 Location Data</h4>
+  <p><strong>On Android</strong> the App only uses location in the foreground, and only when you tap "Hacer check-in": it reads your position once to confirm you are within 150 m of the venue, compares it on your device, and keeps a rounded (~110 m) value inside the local check-in record. It never requests background location.</p>
   <p>The App asks for location permission to:</p>
   <ul>
     <li>Show nearby venues and happy hour deals, and center the map where you are</li>
@@ -168,7 +170,7 @@
   </ul>
 
   <h4>2.6 Purchases</h4>
-  <p>Subscriptions are sold through Apple's In-App Purchase system. <strong>Apple processes your payment; we never see or receive your card details.</strong> We use <strong>RevenueCat</strong> to track whether your subscription is active, which involves sharing an app-specific user identifier and your purchase status with them.</p>
+  <p>On Android, subscriptions will be sold through <strong>Google Play Billing</strong>; Google processes the payment and we never see your card details. On iOS, subscriptions are sold through Apple's In-App Purchase system. <strong>Apple processes your payment; we never see or receive your card details.</strong> We use <strong>RevenueCat</strong> to track whether your subscription is active, which involves sharing an app-specific user identifier and your purchase status with them.</p>
 
   <h4>2.7 Usage Analytics</h4>
   <p>We use <strong>Google Firebase Analytics</strong> and <strong>PostHog</strong> to understand how the App is used so we can improve it. PostHog receives a randomly generated identifier that is not linked to your name, your Apple account, or your email address. This records events such as opening a venue, tapping or saving a deal, completing a check-in, starting a route, viewing the paywall, and completing a purchase, along with your access tier. Firebase Analytics also collects standard device and app information (such as device model, operating system version, app version, an Apple-provided vendor identifier, and coarse region). We also use <strong>Firebase Crashlytics</strong> to receive automatic reports when the App crashes; these contain device and app state, not the content you create, and expire after 90 days. We do not use this data for advertising and we do not sell it.</p>
@@ -194,7 +196,7 @@
   <h3>4. Who Processes Your Data</h3>
   <p>We do not sell or rent your data. We share it only with the service providers that make the App work, and only for that purpose:</p>
   <ul>
-    <li><strong>Google (Firebase)</strong> — database, cloud functions, analytics, crash reporting, and App Check. Google acts as our data processor and stores data on its infrastructure.</li>
+    <li><strong>Google (Firebase)</strong> — database, cloud functions, analytics, crash reporting, App Check, and (on Android) anonymous authentication, Google Maps for the map, and Google Play Billing for subscriptions. Google acts as our data processor and stores data on its infrastructure.</li>
     <li><strong>PostHog</strong> — product analytics. PostHog acts as our data processor and stores data on servers in the United States.</li>
     <li><strong>Twilio</strong> — sending and checking the SMS verification code, if you verify a phone number.</li>
     <li><strong>RevenueCat</strong> — subscription status management.</li>
