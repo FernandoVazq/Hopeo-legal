@@ -176,10 +176,13 @@
   <h4>2.7 Usage Analytics</h4>
   <p>We use <strong>Google Firebase Analytics</strong> and <strong>PostHog</strong> to understand how the App is used so we can improve it. PostHog receives a randomly generated identifier that is not linked to your name, your Apple account, or your email address. This records events such as opening a venue, tapping or saving a deal, completing a check-in, starting a route, viewing the paywall, and completing a purchase, along with your access tier. Firebase Analytics also collects standard device and app information (such as device model, operating system version, app version, an Apple-provided vendor identifier, and coarse region). We also use <strong>Firebase Crashlytics</strong> to receive automatic reports when the App crashes; these contain device and app state, not the content you create, and expire after 90 days. We do not use this data for advertising and we do not sell it.</p>
 
-  <h4>2.8 Abuse Prevention</h4>
+  <h4>2.8 Notifications</h4>
+  <p>Most of Hopeo's alerts — a happy hour about to start, arriving at a venue, a drink on your list — are <strong>scheduled by your own device</strong> and never reach us. One is different: if someone follows you, we send that alert from our servers. To do that, Apple gives your device a <strong>push token</strong> — an address that identifies this installation, not you — and we store it in our database, together with your account identifier, so we know where to deliver. The token changes on its own when you reinstall or restore your device, it is never shared with anyone outside the providers listed in Section 4, and it is deleted when you delete your account. The alert we send never contains text written by another user. If you turn notifications off in iOS Settings, no token is created and nothing is sent.</p>
+
+  <h4>2.9 Abuse Prevention</h4>
   <p>We use <strong>Firebase App Check</strong> to confirm that requests to our servers come from a genuine copy of the App rather than an automated script.</p>
 
-  <h4>2.9 Customer Support</h4>
+  <h4>2.10 Customer Support</h4>
   <p>If you email us for support, we receive whatever you send us (such as your email address and a description of the issue) and use it solely to respond.</p>
 
   <h3>3. How We Use Your Information</h3>
@@ -201,7 +204,7 @@
     <li><strong>PostHog</strong> — product analytics. PostHog acts as our data processor and stores data on servers in the United States.</li>
     <li><strong>Twilio</strong> — sending and checking the SMS verification code, if you verify a phone number.</li>
     <li><strong>RevenueCat</strong> — subscription status management.</li>
-    <li><strong>Apple</strong> — Sign in with Apple, In-App Purchase, and MapKit for maps. Notifications are scheduled locally on your device; we do not run a push server.</li>
+    <li><strong>Apple</strong> — Sign in with Apple, In-App Purchase, MapKit for maps, and the Apple Push Notification service, which delivers the alerts described in 2.8 to your device.</li>
     <li><strong>Google Workspace (Gmail)</strong> — receives the reports you file (including any photo you attach) and venue-claim messages, so our team can review them.</li>
   </ul>
   <p>We may also disclose information if required to do so by law, or where necessary to protect the safety of our users.</p>
