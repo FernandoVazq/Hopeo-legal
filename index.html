@@ -57,7 +57,7 @@
   <header>
     <div class="logo">Hopeo<span class="beer"> 🍺</span> PR</div>
     <h1>Terms of Use &amp; Privacy Policy</h1>
-    <p class="eff">Effective Date: August 17, 2026 &nbsp;•&nbsp; <a href="#privacy">Jump to Privacy Policy</a></p>
+    <p class="eff">Effective Date: September 15, 2026 &nbsp;•&nbsp; <a href="#privacy">Jump to Privacy Policy</a></p>
   </header>
 
   <h2 id="terms">Terms of Use</h2>
@@ -125,7 +125,7 @@
   <h3>1. Introduction</h3>
   <p>MSBI Group LLC (doing business as Hopeo) ("we," "our," or "us") operates the Hopeo mobile application (the "App"), a happy hour and craft beer guide for Puerto Rico. This Privacy Policy explains what information we collect, why we collect it, who processes it on our behalf, and the choices you have.</p>
   <p><strong>Hopeo is a connected app. To sign you in, verify that you are a Puerto Rico local, manage your subscription, publish what you choose to share with other users, and keep the catalog current, we collect information and store it on servers operated by our service providers.</strong> This replaces an earlier version of this policy that described Hopeo as storing everything only on your device.</p>
-  <p>Some things still never leave your iPhone — your check-ins, your badges and passport progress, and the routes you build for yourself. Section 2.5 lists exactly what stays local and what does not, and Section 2.4 explains what happens to your location.</p>
+  <p>Some things still never leave your phone — your check-ins, your badges and passport progress, and the routes you build for yourself. Section 2.5 lists exactly what stays local and what does not, and Section 2.4 explains what happens to your location.</p>
   <p>By downloading or using the App, you agree to the practices described in this Privacy Policy. If you do not agree, please do not use the App.</p>
 
   <h3>2. Information We Collect</h3>
@@ -141,18 +141,18 @@
   <p>Free local access requires confirming a Puerto Rico phone number. When you request a code, we send your phone number to <strong>Twilio</strong>, which generates and delivers the SMS and checks the code you enter. We keep a record linking an opaque challenge identifier to that number only while the code is pending, so the App never has to transmit the raw number a second time; that record is <strong>deleted as soon as you verify, and in any case within 24 hours</strong>. To limit how often codes can be requested we keep a salted one-way hash of the number for up to one hour; it cannot be reversed to recover your number. We use the number only to confirm a Puerto Rico area code. We do not use it for marketing and we do not send you SMS messages other than the verification code.</p>
 
   <h4>2.4 Location Data</h4>
-  <p><strong>On Android</strong> the App only uses location in the foreground, and only when you tap "Hacer check-in": it reads your position once to confirm you are within 150 m of the venue, compares it on your device, and keeps a rounded (~110 m) value inside the local check-in record. It never requests background location.</p>
+  <p><strong>On Android the App only uses location while it is open</strong>, for the same purposes listed below, and it never requests background location. The comparison always happens on your device: the only location value it keeps is the rounded (~110 m) coordinate inside your own check-in record, stored on your phone.</p>
   <p>The App asks for location permission to:</p>
   <ul>
     <li>Show nearby venues and happy hour deals, and center the map where you are</li>
     <li>Confirm you are physically at a venue before allowing a check-in</li>
     <li>Send you alerts about happy hours starting near you (limited to roughly a 10-mile radius)</li>
-    <li>Optionally, with separate "Always" permission that we request only after you have used the App, notify you when you arrive at a venue so you can check in</li>
+    <li>Optionally, with separate "Always" permission that we request only after you have used the App, notify you when you arrive at a venue so you can check in (iPhone only; the Android App never asks for background location)</li>
   </ul>
-  <p><strong>Your location never leaves your device.</strong> When you complete a check-in, your device uses your coordinates to confirm you are actually at the venue, and the check-in record — coordinates included — is stored only in the App on your iPhone. We do not receive it, we do not continuously track or log your movements, and we do not build advertising profiles from your location. You can revoke location access at any time in iOS Settings; the map and nearby features will stop working, but the rest of the App continues to function.</p>
+  <p><strong>Your location never leaves your device.</strong> When you complete a check-in, your device uses your coordinates to confirm you are actually at the venue, and the check-in record — coordinates included — is stored only in the App on your phone. We do not receive it, we do not continuously track or log your movements, and we do not build advertising profiles from your location. You can revoke location access at any time in your phone's settings; the map and nearby features will stop working, but the rest of the App continues to function.</p>
 
   <h4>2.5 Your Activity and Content</h4>
-  <p><strong>These never leave your iPhone.</strong> We do not receive them, they are not backed up to us, and they are gone if you delete the App:</p>
+  <p><strong>These never leave your phone.</strong> We do not receive them, they are not backed up to us, and they are gone if you delete the App:</p>
   <ul>
     <li>Check-in records — the coordinates, the exact time, and any note, rating or photo you added. (A check-in does send one thing to our servers: a monthly <em>count</em> of your check-ins at that venue, under your display name, for the public leaderboards described below. It never includes coordinates, times, notes or photos.)</li>
     <li>Badges and passport progress</li>
@@ -171,13 +171,13 @@
   </ul>
 
   <h4>2.6 Purchases</h4>
-  <p>On Android, subscriptions will be sold through <strong>Google Play Billing</strong>; Google processes the payment and we never see your card details. On iOS, subscriptions are sold through Apple's In-App Purchase system. <strong>Apple processes your payment; we never see or receive your card details.</strong> We use <strong>RevenueCat</strong> to track whether your subscription is active, which involves sharing an app-specific user identifier and your purchase status with them.</p>
+  <p>The Android App is free: it sells no subscription today. If we add one, it will be sold through <strong>Google Play Billing</strong>, Google will process the payment, we will never see your card details, and we will update this policy before that starts. On iOS, subscriptions are sold through Apple's In-App Purchase system. <strong>Apple processes your payment; we never see or receive your card details.</strong> We use <strong>RevenueCat</strong> to track whether your subscription is active, which involves sharing an app-specific user identifier and your purchase status with them.</p>
 
   <h4>2.7 Usage Analytics</h4>
   <p>We use <strong>Google Firebase Analytics</strong> and <strong>PostHog</strong> to understand how the App is used so we can improve it. PostHog receives a randomly generated identifier that is not linked to your name, your Apple account, or your email address. This records events such as opening a venue, tapping or saving a deal, completing a check-in, starting a route, viewing the paywall, and completing a purchase, along with your access tier. Firebase Analytics also collects standard device and app information (such as device model, operating system version, app version, an Apple-provided vendor identifier, and coarse region). We also use <strong>Firebase Crashlytics</strong> to receive automatic reports when the App crashes; these contain device and app state, not the content you create, and expire after 90 days. We do not use this data for advertising and we do not sell it.</p>
 
   <h4>2.8 Notifications</h4>
-  <p>Most of Hopeo's alerts — a happy hour about to start, arriving at a venue, a drink on your list — are <strong>scheduled by your own device</strong> and never reach us. One is different: if someone follows you, we send that alert from our servers. To do that, Apple gives your device a <strong>push token</strong> — an address that identifies this installation, not you — and we store it in our database, together with your account identifier, so we know where to deliver. The token changes on its own when you reinstall or restore your device, it is never shared with anyone outside the providers listed in Section 4, and the token for the device you delete your account from is removed at that time. If you used Hopeo on more than one device, each device removes its own token when you delete your account or turn notifications off on it. The alert we send never contains text written by another user. If you turn notifications off in iOS Settings, no token is created and nothing is sent.</p>
+  <p>Most of Hopeo's alerts — a happy hour about to start, arriving at a venue, a drink on your list — are <strong>scheduled by your own device</strong> and never reach us. One is different: if someone follows you, we send that alert from our servers. To do that, Apple (on iPhone) or Google (on Android) gives your device a <strong>push token</strong> — an address that identifies this installation, not you — and we store it in our database, together with your account identifier, so we know where to deliver. The token changes on its own when you reinstall or restore your device, it is never shared with anyone outside the providers listed in Section 4, and the token for the device you delete your account from is removed at that time. If you used Hopeo on more than one device, each device removes its own token when you delete your account or turn notifications off on it. The alert we send never contains text written by another user. If you turn notifications off in your phone's settings, no token is created and nothing is sent.</p>
 
   <h4>2.9 Abuse Prevention</h4>
   <p>We use <strong>Firebase App Check</strong> to confirm that requests to our servers come from a genuine copy of the App rather than an automated script.</p>
@@ -200,7 +200,7 @@
   <h3>4. Who Processes Your Data</h3>
   <p>We do not sell or rent your data. We share it only with the service providers that make the App work, and only for that purpose:</p>
   <ul>
-    <li><strong>Google (Firebase)</strong> — database, cloud functions, analytics, crash reporting, App Check, and (on Android) anonymous authentication, Google Maps for the map, and Google Play Billing for subscriptions. Google acts as our data processor and stores data on its infrastructure.</li>
+    <li><strong>Google (Firebase)</strong> — database, cloud functions, App Check, and, on iPhone only, analytics and crash reporting; the Android App includes neither. On Android, Firebase also provides the anonymous account identifier, and Google Maps draws the map. Google acts as our data processor and stores data on its infrastructure.</li>
     <li><strong>PostHog</strong> — product analytics. PostHog acts as our data processor and stores data on servers in the United States.</li>
     <li><strong>Twilio</strong> — sending and checking the SMS verification code, if you verify a phone number.</li>
     <li><strong>RevenueCat</strong> — subscription status management.</li>
@@ -230,7 +230,7 @@
     <li><strong>Access:</strong> Your profile, check-ins, routes, and badges are visible to you in the App. For a copy of anything else we hold, email us.</li>
     <li><strong>Correction:</strong> You can change your avatar, color and language in the App at any time. Your display name is set once when you join; to change it, email us and we will update it (your previous handle stays reserved so nobody can impersonate you). You can delete any content you posted by deleting your account, which unlinks it from you.</li>
     <li><strong>Deletion:</strong> You can delete individual entries or your entire account from within the App, or ask us to do it.</li>
-    <li><strong>Permissions:</strong> You can revoke location, notification, camera, and photo access at any time in iOS Settings, and turn Hopeo's alerts off inside the App.</li>
+    <li><strong>Permissions:</strong> You can revoke location, notification, camera, and photo access at any time in your phone's settings (iOS Settings, or Settings › Apps on Android), and turn Hopeo's alerts off inside the App.</li>
   </ul>
   <p>To exercise any of these rights, contact us using the information in Section 10.</p>
 
